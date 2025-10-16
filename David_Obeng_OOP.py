@@ -6,3 +6,6 @@ class Student:
 
     def display_info(self):
         print(f'Name: {self.name}, age: {self.age} and Grade: {self.grade}.')
+
+class GraduateStudent(Student):
+    pass
