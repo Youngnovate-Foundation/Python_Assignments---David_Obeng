@@ -3,3 +3,6 @@ class Student:
         self.name = name
         self.age = age
         self.grade = grade
+
+    def display_info(self):
+        print(f'Name: {self.name}, age: {self.age} and Grade: {self.grade}.')
