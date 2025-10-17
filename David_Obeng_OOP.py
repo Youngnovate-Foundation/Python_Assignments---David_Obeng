@@ -13,7 +13,7 @@ class Student:
         if 1.0 < grade < 5.0:
             self.__grade = grade
         else:
-            print('Grade must be between 1.0 and 9.0')
+            print('Grade must be between 1.0 and 5.0')
 
     def display_info(self):
         return f'Name: {self.name}, age: {self.age} and Grade: {self.__grade}.'
@@ -48,7 +48,7 @@ print(std2.get_grade())
 print('\n')
 
 # Setting Grade greater than 5
-print(std3.set_grade(6))
+std3.set_grade(6)
 print('\n')
 
 # Polymorphysm
