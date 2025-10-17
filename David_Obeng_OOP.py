@@ -10,7 +10,10 @@ class Student:
     
     # Setter method
     def set_grade(self, grade):
-        self.__grade = grade
+        if 1.0 < grade < 5.0:
+            self.__grade = grade
+        else:
+            print('Grade must be between 1.0 and 9.0')
 
     def display_info(self):
         return f'Name: {self.name}, age: {self.age} and Grade: {self.__grade}.'
@@ -27,20 +30,26 @@ class GraduateStudent(Student):
     
 
 # Objects 
-std1 = Student("Kwame Ansah", 21, "C")
-std2 = Student("Sarah Odom", 25, "D")
-std3 = Student("Samuel Sam", 24, "B")
-grad1 = GraduateStudent("David Obeng", 23, "A", "Doctor of Science")
-grad2 = GraduateStudent("Amy Oteng", 24, "C", "Bachelor of Arts")
+std1 = Student("Kwame Ansah", 21, 1)
+std2 = Student("Sarah Odom", 25, 4)
+std3 = Student("Samuel Sam", 24, 1)
+grad1 = GraduateStudent("David Obeng", 23, 2, "Doctor of Science")
+grad2 = GraduateStudent("Amy Oteng", 24, 4.5, "Bachelor of Arts")
 
 # Displaying Info
 print(std1.display_info())
 print(grad1.display_info())
+print('\n')
 
 #Getter and Setter Methods
 print(std2.get_grade())
-std2.set_grade("A")
+std2.set_grade(2)
 print(std2.get_grade())
+print('\n')
+
+# Setting Grade greater than 5
+print(std3.set_grade(6))
+print('\n')
 
 # Polymorphysm
 students = [std1, std2, std3, grad1, grad2]
