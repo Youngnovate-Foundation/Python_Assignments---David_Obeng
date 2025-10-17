@@ -13,10 +13,10 @@ class Student:
         if 1.0 < grade < 5.0:
             self.__grade = grade
         else:
-            print('Grade must be between 1.0 and 5.0')
+            print('Grade must be between 1.0 and 5.0 \n')
 
     def display_info(self):
-        return f'Name: {self.name}, age: {self.age} and Grade: {self.__grade}.'
+        return f'Name: {self.name} \nAge: {self.age} \nGrade: {self.__grade}'
 
 # Gruaduate Student Class
 class GraduateStudent(Student):
@@ -26,7 +26,7 @@ class GraduateStudent(Student):
 
     # Overiding display Info method.
     def display_info(self):
-        return f'Graduate Student - Name: {self.name}, Age: {self.age}, Grade: {self._Student__grade} and Degree: {self.degree}.'
+        return f'Name: {self.name} \nAge: {self.age} \nGrade: {self._Student__grade} \nDegree: {self.degree}.'
     
 
 # Objects 
@@ -37,9 +37,16 @@ grad1 = GraduateStudent("David Obeng", 23, 2, "Doctor of Science")
 grad2 = GraduateStudent("Amy Oteng", 24, 4.5, "Bachelor of Arts")
 
 # Displaying Info
-print(std1.display_info())
-print(grad1.display_info())
-print('\n')
+print('_________Student 1__________')
+print(std1.display_info() + '\n')
+print('_________Student 2__________')
+print(std2.display_info()  + '\n')
+print('_________Student 3__________')
+print(std3.display_info()  + '\n')
+print('______Grad. Student 1_______')
+print(grad1.display_info()  + '\n')
+print('______Grad. Student 2_______')
+print(grad2.display_info()  + '\n')
 
 #Getter and Setter Methods
 print(std2.get_grade())
@@ -49,10 +56,11 @@ print('\n')
 
 # Setting Grade greater than 5
 std3.set_grade(6)
-print('\n')
 
 # Polymorphysm
 students = [std1, std2, std3, grad1, grad2]
 
 for student in students:
+    print('========================')
     print(student.display_info())
+    print('======================== \n')
