@@ -7,8 +7,11 @@ class Student:
     # Getter method
     def get_grade(self):
         return self.__grade
+    
+    # Setter method
+    def set_grade(self, grade):
+        self.__grade = grade
 
-    # Display Student info
     def display_info(self):
         return f'Name: {self.name}, age: {self.age} and Grade: {self.__grade}.'
 
